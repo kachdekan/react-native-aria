@@ -100,7 +100,7 @@ export const useMapDomPropsToRN = (props: any, ref: RefObject<any>) => {
     if (ref.current) {
       ref.current.tabIndex = props.tabIndex;
     }
-  }, [props.tabIndex]);
+  }, [props.tabIndex, ref]);
 
   return mapDomPropsToRN(props);
 };
