@@ -1,5 +1,5 @@
-import { AriaTabsProps } from '@react-types/tabs';
-import { TabsState } from '@react-stately/tabs';
+import { AriaTabListProps } from '@react-types/tabs';
+import { TabListState } from '@react-stately/tabs';
 
 interface TabsAria {
   /** Props for the tablist container. */
@@ -9,15 +9,14 @@ interface TabsAria {
 }
 
 export function useTabs<T>(
-  _props: AriaTabsProps<T>,
-  _state: TabsState<T>,
+  _props: AriaTabListProps<T>,
+  _state: TabListState<T>,
   _ref: any
 ): TabsAria {
-
   return {
     tabListProps: {
-        accessibilityRole: "tablist"
+      accessibilityRole: 'tablist',
     },
-    tabPanelProps: {}
+    tabPanelProps: {},
   };
 }

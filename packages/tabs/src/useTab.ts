@@ -9,33 +9,32 @@ interface TabAria {
 }
 
 export function useTab<T>(
-  props: AriaTabProps<T>,
+  props: AriaTabProps,
   state: SingleSelectListState<T>,
   _ref: RefObject<HTMLElement>
 ): TabAria {
-  let { item, isDisabled: propsDisabled } = props;
-  let { key } = item;
+  let { key, isDisabled: propsDisabled } = props;
   let { selectionManager: manager, selectedKey } = state;
 
   let isSelected = key === selectedKey;
 
   const onPress = () => {
-      manager.select(key);
-  }
+    manager.select(key);
+  };
 
   let isDisabled = propsDisabled || state.disabledKeys.has(key);
 
   let { pressProps } = usePress({ onPress, isDisabled });
- 
-  const tabProps  = {
+
+  const tabProps = {
     ...pressProps,
     accessibilityState: {
-        selected: isSelected
+      selected: isSelected,
     },
     accessibilityRole: 'tab',
-  }
-  
+  };
+
   return {
-    tabProps
+    tabProps,
   };
 }

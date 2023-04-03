@@ -1,7 +1,10 @@
-import { AriaTabsProps } from '@react-types/tabs';
+import { AriaTabListProps } from '@react-types/tabs';
 import { HTMLAttributes } from 'react';
-import { TabsState } from '@react-stately/tabs';
-import { useTabs as useTabsWeb } from '@react-aria/tabs';
+import { TabListState } from '@react-stately/tabs';
+import {
+  useTabList as useTabsWeb,
+  useTabPanel as useTabsPanelWeb,
+} from '@react-aria/tabs';
 import { mapDomPropsToRN } from '@react-native-aria/utils';
 
 interface TabsAria {
@@ -12,11 +15,12 @@ interface TabsAria {
 }
 
 export function useTabs<T>(
-  props: AriaTabsProps<T>,
-  state: TabsState<T>,
+  props: AriaTabListProps<T>,
+  state: TabListState<T>,
   ref: any
 ): TabsAria {
-  const { tabListProps, tabPanelProps } = useTabsWeb(props, state, ref);
+  const { tabListProps } = useTabsWeb(props, state, ref);
+  const { tabPanelProps } = useTabsPanelWeb(props, state, ref);
 
   return {
     tabListProps: mapDomPropsToRN(tabListProps),
