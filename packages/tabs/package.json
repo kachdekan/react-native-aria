@@ -54,8 +54,8 @@
   "dependencies": {
     "@react-aria/selection": "^3.13.1",
     "@react-aria/tabs": "^3.4.1",
-    "@react-native-aria/interactions": "^0.2.9",
-    "@react-native-aria/utils": "^0.2.9",
+    "@react-native-aria/interactions": "file:../interactions",
+    "@react-native-aria/utils": "file:../utils",
     "@react-stately/tabs": "^3.3.0",
     "@react-types/tabs": "^3.2.0"
   },
