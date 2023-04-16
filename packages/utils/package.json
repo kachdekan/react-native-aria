@@ -45,7 +45,7 @@
   },
   "homepage": "https://github.com/intergalacticspacehighway/react-native-bob-mono#readme",
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/@kachdekan"
+    "@kachdekan:registry": "https://npm.pkg.github.com"
   },
   "peerDependencies": {
     "react": "*",
@@ -79,7 +79,7 @@
       "tagName": "v${version}"
     },
     "npm": {
-      "publish": true
+      "publish": false
     },
     "github": {
       "release": true
