@@ -45,7 +45,7 @@
   },
   "homepage": "https://github.com/intergalacticspacehighway/react-native-bob-mono#readme",
   "publishConfig": {
-    "registry": "https://registry.npmjs.org/"
+    "registry": "https://npm.pkg.github.com/@kachdekan"
   },
   "peerDependencies": {
     "react": "*",

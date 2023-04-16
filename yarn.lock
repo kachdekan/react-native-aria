@@ -2180,6 +2180,13 @@
     "@swc/helpers" "^0.4.14"
     clsx "^1.1.1"
 
+"@react-native-aria/interactions@file:packages/interactions":
+  version "0.2.9"
+  dependencies:
+    "@react-aria/interactions" "^3.14.0"
+    "@react-aria/utils" "^3.15.0"
+    "@react-native-aria/utils" "file:../../.cache/yarn/v6/npm-@react-native-aria-interactions-0.2.9-2255d396-d406-4a1e-99ba-c1a5838f0aad-1681645492033/node_modules/@react-native-aria/utils"
+
 "@react-native-aria/overlays@^0.2.1", "@react-native-aria/overlays@^0.2.2":
   version "0.2.11"
   resolved "https://registry.yarnpkg.com/@react-native-aria/overlays/-/overlays-0.2.11.tgz#6dbffef9fa83f72b702c56238feba25bd9351c08"
@@ -2189,6 +2196,12 @@
     "@react-native-aria/utils" "^0.2.6"
     "@react-stately/overlays" "^3.1.1"
     "@react-types/overlays" "^3.4.0"
+
+"@react-native-aria/utils@file:packages/utils":
+  version "0.2.9"
+  dependencies:
+    "@react-aria/ssr" "^3.5.0"
+    "@react-aria/utils" "^3.15.0"
 
 "@react-native-community/cli-clean@^10.1.1":
   version "10.1.1"
